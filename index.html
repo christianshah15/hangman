@@ -10,13 +10,15 @@
 
       
         function() {
+         
           var total_guesses = 10;
           var word = "f i s h";
           var blanks = "_ _ _ _";
           var guesses = "";
 
-          $(".letter").click(
+          $("#word").html(blanks);
 
+          $(".letter").click(
             function() {
               var id = $(this).attr('id');
               console.log("Clicked on " + id);
@@ -33,6 +35,8 @@
                   } else {
                       $("#numleft").html(total_guesses);
               }
+            }
+          }
             )
           
         }   );
